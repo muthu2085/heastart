@@ -1,6 +1,6 @@
 # Headstart — Website
 
-A static, responsive corporate website for **Headstart** (Branding & Marketing · Talent & Recruitment). It is plain HTML/CSS/JS with no framework, so it runs from any static host.
+A static, responsive corporate website for **Headstart** (Branding & Marketing · C-Level Hiring & Payroll Compliance). It is plain HTML/CSS/JS with no framework, so it runs from any static host.
 
 ## Preview
 
@@ -16,7 +16,7 @@ npx serve .
 index.html                 Home
 about.html                 About Us
 branding-marketing.html    Branding & Marketing overview (+ 8 service pages)
-talent-recruitment.html    Talent & Recruitment overview (+ 4 service pages)
+talent-recruitment.html    C-Level Hiring & Payroll Compliance overview (+ 5 service pages)
 our-works.html             Our Works (filterable)
 partner.html               Partner With Us (+ partnership form)
 contact.html               Contact Us (+ form, FAQ, map placeholder)

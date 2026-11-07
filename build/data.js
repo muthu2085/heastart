@@ -5,11 +5,11 @@
 // ---------------------------------------------------------------------------
 const site = {
   name: 'Headstart',
-  tagline: 'Branding & Marketing | Talent & Recruitment',
-  phone: '+91 XXXXX XXXXX',
-  phoneHref: '+910000000000',
-  email: 'hello@yourcompany.com',
-  whatsapp: '910000000000', // country code + number, digits only (used for wa.me link)
+  tagline: 'Branding & Marketing | C-Level Hiring & Payroll Compliance',
+  phone: '8668063955',
+  phoneHref: '+918668063955',
+  email: 'info@headstartsolutions.in',
+  whatsapp: '918668063955', // country code + number, digits only (used for wa.me link)
   address: 'Your office address, City, State, India',
   hours: 'Mon – Sat, 9:30 AM – 6:30 PM',
   social: {
@@ -39,10 +39,10 @@ const marketing = [
     image: '1460925895917-afdab827c52f',
     image2: '1560472354-b33ff0c44a43',
     intro: [
-      'We help businesses build a stronger digital presence, reach the right audience, and generate measurable business results through strategic, data-driven digital marketing.',
-      'Our integrated approach combines performance marketing, social media management, search engine optimisation, content creation, landing page development, and lead generation to help brands attract, engage, and convert customers.',
+      'We help businesses strengthen their digital presence, connect with the right audience, and drive measurable growth through strategic, data-driven digital marketing.',
+      'Our integrated approach brings together performance marketing, social media management, search engine optimisation (SEO), content creation, landing page development and lead generation to help brands attract the right audience, build meaningful engagement and convert prospects into customers.',
     ],
-    highlights: ['Data-driven strategy', 'Full-funnel execution', 'Transparent reporting'],
+    highlights: ['Data-Driven Strategies', 'End-to-End Marketing Execution', 'Transparent Performance Reporting'],
     form: 'enquiry',
     sections: [
       {
@@ -120,13 +120,12 @@ const marketing = [
     blurb: 'Summits, leadership forums, award nights and launches — planned and delivered end to end.',
     tagline: 'Creating Experiences. Connecting Leaders. Inspiring Growth.',
     image: '1540575467063-178a50c2df87',
-    image2: '1587825140708-dfaf72ae4b04',
     intro: [
       'We conceptualise, plan and deliver impactful corporate events that bring people together, strengthen business relationships and create lasting brand experiences.',
       'From high-level leadership summits and industry conferences to annual celebrations, award ceremonies, product launches and professional networking events, we manage every stage of the event journey with strategic planning, creative execution and operational excellence.',
       'Our focus goes beyond organising events. We create meaningful platforms for organisations to engage stakeholders, showcase their brands, share knowledge and build valuable connections.',
     ],
-    highlights: ['End-to-end delivery', 'Sponsorship support', 'Delegate experience'],
+    highlights: ['End-to-end delivery', 'Delegate experience'],
     form: 'event',
     sections: [
       {
@@ -215,18 +214,19 @@ const marketing = [
     title: 'Influencer & Content Marketing',
     icon: 'play',
     blurb: 'Creator partnerships, video, executive branding and storytelling that build trust.',
+    lead: 'Creator partnerships, engaging content, executive branding, and authentic storytelling that connect brands with audiences and turn influence into impact.',
     tagline: 'Create Stories. Build Influence. Grow Your Brand.',
     image: '1611926653458-09294b3142bf',
     image2: '1563986768609-322da13575f3',
     intro: [
-      'We help brands connect with their audiences through engaging content, creator partnerships and authentic brand storytelling that builds trust, visibility and engagement.',
+      'We help brands connect with their audiences through engaging content, creator partnerships, and authentic brand storytelling to build trust, enhance visibility, and drive engagement.',
       'From creator selection and content strategy to production, campaign management and performance tracking, we deliver content solutions aligned with your brand goals.',
     ],
     highlights: ['Creator partnerships', 'Video-first content', 'Executive branding'],
     form: 'enquiry',
     sections: [
       {
-        type: 'cards', eyebrow: 'Our Services', title: 'Content that earns attention — and keeps it',
+        type: 'cards', eyebrow: 'Our Services', title: 'Content That Captures Attention and Builds Lasting Connections',
         items: [
           { icon: 'users', t: 'Influencer Marketing', d: 'Collaborate with regional creators and digital influencers to reach engaged, relevant audiences.' },
           { icon: 'linkedin', t: 'LinkedIn Thought Leadership', d: 'Build professional credibility and industry authority.' },
@@ -236,7 +236,7 @@ const marketing = [
           { icon: 'heart', t: 'User-Generated Content (UGC)', d: 'Encourage authentic customer experiences and brand advocacy.' },
         ],
       },
-      { type: 'chips', eyebrow: 'Industries We Serve', title: 'Stories for every category',
+      { type: 'chips', eyebrow: 'Industries We Serve', title: 'Every Brand Has a Story.',
         items: ['D2C brands', 'Lifestyle', 'Fashion', 'Healthcare', 'Education', 'Technology', 'Retail', 'Corporate businesses'] },
       { type: 'process', eyebrow: 'Our Approach', title: 'From idea to influence',
         items: [
@@ -255,6 +255,7 @@ const marketing = [
     title: 'Community & Professional Network Marketing',
     icon: 'network',
     blurb: 'Reach professional communities through associations, webinars, newsletters and member programmes.',
+    lead: 'We help brands connect with professional communities through strategic partnerships with associations, webinars, newsletters, and member engagement programmes that foster meaningful relationships and expand brand reach.',
     tagline: 'Building Communities. Creating Connections. Driving Engagement.',
     image: '1528605248644-14dd04022da1',
     image2: '1559223607-a43c990c692c',
@@ -299,7 +300,7 @@ const marketing = [
     image: '1600880292203-757bb62b4baf',
     image2: '1600880292089-90a7e086ee0c',
     intro: [
-      'We help businesses build strategic partnerships, collaborate with complementary brands and unlock new opportunities for market reach, customer acquisition and business growth.',
+      'We help businesses build strategic partnerships, collaborate with complementary brands, and unlock new opportunities to expand market reach, acquire customers, and accelerate business growth.',
       'From partner identification and outreach to collaboration planning and performance tracking, we create partnership strategies aligned with your business objectives.',
     ],
     highlights: ['Partner identification', 'Co-marketing execution', 'Shared outcomes'],
@@ -340,7 +341,7 @@ const marketing = [
     image2: '1444723121867-7a241cacace9',
     intro: [
       'We help businesses expand into new regional markets through localised marketing strategies, targeted campaigns and on-ground engagement.',
-      'From brand positioning to customer acquisition, we combine digital marketing, regional partnerships and experiential promotions to build a strong local presence.',
+      'From brand positioning to customer acquisition, we combine digital marketing, regional partnerships and experiential campaigns that build brand awareness and strengthen local market presence.',
     ],
     highlights: ['Local-language campaigns', 'Regional partnerships', 'Integrated execution'],
     form: 'enquiry',
@@ -373,7 +374,7 @@ const marketing = [
 ];
 
 // ---------------------------------------------------------------------------
-// Talent & Recruitment services
+// C-Level Hiring & Payroll Compliance services
 // ---------------------------------------------------------------------------
 const talent = [
   {
@@ -484,6 +485,7 @@ const talent = [
     title: 'Interim & Fractional CXO Leadership Services',
     icon: 'clock',
     blurb: 'Experienced executives deployed fast for transitions, transformation and growth phases.',
+    lead: 'Deploying experienced interim executives to bridge leadership gaps, accelerate transformation, and deliver business continuity.',
     tagline: 'Experienced Leadership, Exactly When You Need It.',
     image: '1556761175-5973dc0f32e7',
     image2: '1551434678-e076c223a692',
@@ -572,6 +574,48 @@ const talent = [
     ctaTitle: 'Make hiring decisions with confidence',
     ctaButton: 'Request a Report',
   },
+  {
+    slug: 'payroll-compliance',
+    short: 'Payroll & Statutory Compliance',
+    title: 'Payroll & Statutory Compliance',
+    icon: 'shield',
+    blurb: 'Accurate payroll processing and statutory compliance, managed end to end.',
+    tagline: 'Accurate Payroll. Complete Compliance. Complete Confidence.',
+    image: '1554224155-6726b3ff858f',
+    image2: '1450101499163-c8848c66ca85',
+    intro: [
+      'We take the complexity out of payroll by processing salaries accurately and on time, managing statutory deductions and filings, and keeping your organisation aligned with applicable labour and tax regulations.',
+      'From employee data setup and monthly salary processing to PF, ESI, TDS and professional tax compliance, we provide a structured payroll process that reduces risk and frees your team to focus on the business.',
+    ],
+    highlights: ['Accurate, on-time payroll', 'Statutory compliance', 'Confidential data handling'],
+    form: 'enquiry',
+    sections: [
+      {
+        type: 'cards', eyebrow: 'Our Services', title: 'Everything your payroll needs, in one place',
+        items: [
+          { icon: 'layers', t: 'Payroll Processing', d: 'Monthly salary calculation covering earnings, deductions, attendance and leave inputs, reimbursements and bonuses.' },
+          { icon: 'shield', t: 'Statutory Compliance', d: 'Management of PF, ESI, professional tax and labour welfare fund contributions and related filings.' },
+          { icon: 'pie', t: 'TDS & Tax Support', d: 'Salary TDS calculation, investment declarations, quarterly returns and Form 16 support.' },
+          { icon: 'bar', t: 'Payslips & Reports', d: 'Clear payslips for employees, with payroll registers and summary reports for management.' },
+          { icon: 'refresh', t: 'Full & Final Settlements', d: 'Accurate exit calculations, including gratuity and leave encashment where applicable.' },
+          { icon: 'search', t: 'Audit & Inspection Support', d: 'Organised records and registers to support audits and statutory inspections.' },
+        ],
+      },
+      { type: 'chips', eyebrow: 'Who We Support', title: 'Payroll support at every stage of growth',
+        items: ['Startups and first-time employers', 'Growing businesses', 'Multi-location teams', 'Companies expanding into new states', 'Organisations outsourcing payroll', 'Teams with permanent and contract staff'] },
+      { type: 'process', eyebrow: 'Our Approach', title: 'A clear monthly payroll cycle',
+        items: [
+          { t: 'Onboard', d: 'Understand your salary structures, policies and compliance requirements.' },
+          { t: 'Collect', d: 'Gather attendance, leave and salary inputs for the month.' },
+          { t: 'Process', d: 'Calculate salaries, deductions and statutory contributions.' },
+          { t: 'Comply', d: 'Prepare statutory payments, returns and filings on schedule.' },
+          { t: 'Report', d: 'Share payslips, registers and management summaries.' },
+        ] },
+    ],
+    cta: 'Tell us about your team size and current payroll setup and we will recommend the right level of support.',
+    ctaTitle: 'Simplify your payroll and compliance',
+    ctaButton: 'Get Payroll Support',
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -581,7 +625,7 @@ const works = [
   { cat: 'events', label: 'Corporate Events', t: 'Leadership Summit for a National HR Association', d: 'Concept, agenda design, speaker management, sponsorship and on-ground production for a one-day leadership summit.', tags: ['Concept', 'Sponsorship', 'Production'], image: '1587825140708-dfaf72ae4b04' },
   { cat: 'b2b', label: 'B2B Lead Generation', t: 'Account-Based Pipeline for a SaaS Platform', d: 'Decision-maker mapping, LinkedIn and email outreach, and appointment setting across priority enterprise accounts.', tags: ['ABM', 'Outreach', 'Appointments'], image: '1552664730-d307ca884978' },
   { cat: 'digital', label: 'Digital Marketing', t: 'Performance Campaigns for a D2C Wellness Brand', d: 'Google and Meta ads, conversion-focused landing pages and creative testing to scale customer acquisition.', tags: ['Meta Ads', 'Google Ads', 'Landing Pages'], image: '1432888498266-38ffec3eaf0a' },
-  { cat: 'talent', label: 'Talent & Recruitment', t: 'CFO Search for a Growth-Stage Fintech', d: 'Confidential market mapping and assessment to appoint a CFO ahead of a fundraising round.', tags: ['C-Level', 'Confidential', 'Finance'], image: '1573497019940-1c28c88b4f3e' },
+  { cat: 'talent', label: 'C-Level Hiring', t: 'CFO Search for a Growth-Stage Fintech', d: 'Confidential market mapping and assessment to appoint a CFO ahead of a fundraising round.', tags: ['C-Level', 'Confidential', 'Finance'], image: '1573497019940-1c28c88b4f3e' },
   { cat: 'activation', label: 'Brand Activation', t: 'Mall Activation Series for a Consumer Electronics Launch', d: 'Interactive experience zones, product demos and trained promoter teams across high-footfall malls.', tags: ['Mall Activation', 'Sampling', 'Launch'], image: '1556740738-b6a63e27c4df' },
   { cat: 'content', label: 'Influencer & Content', t: 'Founder-Led Thought Leadership Programme', d: 'LinkedIn content strategy, ghost-written posts and video series building a founder’s industry voice.', tags: ['LinkedIn', 'Executive Branding', 'Video'], image: '1531545514256-b1400bc00f31' },
   { cat: 'digital', label: 'Regional Market Entry', t: 'Regional Launch for an Edtech Brand', d: 'Local-language digital campaigns, regional creators and campus activations to establish a new market.', tags: ['Localisation', 'Creators', 'Campus'], image: '1523240795612-9a054b0db644' },

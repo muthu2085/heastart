@@ -74,8 +74,8 @@ const header = (active) => {
           ${megaMenu(marketing, 'branding-marketing.html', 'Branding & Marketing', '1533750349088-cd871a92f312', 'Integrated digital, B2B, events and on-ground marketing that builds brands and drives demand.')}
         </li>
         <li class="has-mega">
-          <a class="${cls('talent')}" href="talent-recruitment.html" aria-haspopup="true">Talent &amp; Recruitment ${icon('chevron-down', 'nav__chev')}</a>
-          ${megaMenu(talent, 'talent-recruitment.html', 'Talent & Recruitment', '1519085360753-af0119f7cbe7', 'Leadership search, board appointments, interim CXOs and talent intelligence.', 1)}
+          <a class="${cls('talent')}" href="talent-recruitment.html" aria-haspopup="true">C-Level Hiring &amp; Payroll Compliance ${icon('chevron-down', 'nav__chev')}</a>
+          ${megaMenu(talent, 'talent-recruitment.html', 'C-Level Hiring & Payroll Compliance', '1519085360753-af0119f7cbe7', 'Leadership search, board appointments, interim CXOs, talent intelligence and payroll compliance.', 1)}
         </li>
         <li><a class="${cls('works')}" href="our-works.html">Our Works</a></li>
         <li><a class="${cls('partner')}" href="partner.html">Partner</a></li>
@@ -101,7 +101,7 @@ const header = (active) => {
         </div></div>
       </li>
       <li class="mnav__group">
-        <button type="button" data-acc>Talent &amp; Recruitment ${icon('chevron-down')}</button>
+        <button type="button" data-acc>C-Level Hiring &amp; Payroll Compliance ${icon('chevron-down')}</button>
         <div class="mnav__sub"><div>
           <a href="talent-recruitment.html"><strong>Overview</strong></a>
           ${talent.map((s) => `<a href="${s.slug}.html">${e(s.short)}</a>`).join('')}
@@ -130,7 +130,7 @@ const footer = () => `
     <div class="footer__top">
       <div class="footer__brand">
         <a class="logo logo--light logo--footer" href="index.html" aria-label="Headstart home">${logo('lg-f')}</a>
-        <p>Branding &amp; Marketing and Talent &amp; Recruitment, delivered as one growth partner. We help ambitious organisations build brands, generate demand and appoint the leaders who take them further.</p>
+        <p>Branding &amp; Marketing and C-Level Hiring &amp; Payroll Compliance, delivered as one growth partner. We help ambitious organisations build brands, generate demand and appoint the leaders who take them further.</p>
         <div class="socials">${socials()}</div>
       </div>
       <div class="footer__col">
@@ -138,7 +138,7 @@ const footer = () => `
         <ul>${marketing.map((s) => `<li><a href="${s.slug}.html">${e(s.short)}</a></li>`).join('')}</ul>
       </div>
       <div class="footer__col">
-        <h3>Talent &amp; Recruitment</h3>
+        <h3>C-Level Hiring &amp; Payroll Compliance</h3>
         <ul>${talent.map((s) => `<li><a href="${s.slug}.html">${e(s.short)}</a></li>`).join('')}</ul>
         <h3 class="mt">Company</h3>
         <ul>
@@ -245,7 +245,7 @@ const consent = (text = 'I agree to be contacted by Headstart regarding my enqui
 
 const serviceGroups = [
   { label: 'Branding & Marketing', items: marketing.map((s) => s.short) },
-  { label: 'Talent & Recruitment', items: talent.map((s) => s.short) },
+  { label: 'C-Level Hiring & Payroll Compliance', items: talent.map((s) => s.short) },
   { label: 'Other', items: ['Partnership enquiry', 'General enquiry'] },
 ];
 
@@ -494,7 +494,7 @@ const statement = (text, ebText = 'Overview') => `
 // ---------------------------------------------------------------------------
 const servicePage = (s, pillar) => {
   const isTalent = pillar === 'talent';
-  const pillarName = isTalent ? 'Talent & Recruitment' : 'Branding & Marketing';
+  const pillarName = isTalent ? 'C-Level Hiring & Payroll Compliance' : 'Branding & Marketing';
   const pillarHref = isTalent ? 'talent-recruitment.html' : 'branding-marketing.html';
   const list = isTalent ? talent : marketing;
   const related = list.filter((x) => x.slug !== s.slug).slice(0, 3);
@@ -502,8 +502,8 @@ const servicePage = (s, pillar) => {
 
   const overview = `
 <section class="section overview">
-  <div class="container overview__grid">
-    <div class="overview__media">${media(s.image2, s.title, { w: 1000, h: 800, attrs: 'data-reveal="wipe"' })}</div>
+  <div class="container overview__grid${s.image2 ? '' : ' overview__grid--solo'}">
+    ${s.image2 ? `<div class="overview__media">${media(s.image2, s.title, { w: 1000, h: 800, attrs: 'data-reveal="wipe"' })}</div>` : ''}
     <div class="overview__body" data-reveal>
       ${eyebrow('What we do')}
       ${s.intro.slice(1).map((p) => `<p class="overview__p">${e(p)}</p>`).join('')}
@@ -531,8 +531,8 @@ const servicePage = (s, pillar) => {
       eb: pillarName,
       title: s.title,
       tagline: s.tagline,
-      lead: s.blurb,
-      buttons: btn('#enquire', s.ctaButton || 'Talk to an expert') + btn(pillarHref, `All ${pillarName}`, 'ghost', 'arrow-right'),
+      lead: s.lead || s.blurb,
+      buttons: btn('#enquire', s.ctaButton || 'Talk to an expert') + btn(pillarHref, `All ${isTalent ? 'Hiring & Payroll' : pillarName}`, 'ghost', 'arrow-right'),
       image: s.image,
       floatIcon: s.icon,
       floatText: s.highlights[0],
@@ -619,14 +619,14 @@ const marketingPage = () => layout({
 });
 
 const talentPage = () => layout({
-  title: 'Talent & Recruitment — Executive Search | Headstart',
-  desc: 'C-level executive hiring, board and independent director search, interim and fractional CXOs, and talent mapping and market intelligence.',
+  title: 'C-Level Hiring & Payroll Compliance | Headstart',
+  desc: 'C-level executive hiring, board and independent director search, interim and fractional CXOs, talent mapping and market intelligence, and payroll compliance.',
   active: 'talent',
   page: 'pillar',
   body:
     pageHero({
-      crumbs: [{ t: 'Talent & Recruitment' }],
-      eb: 'Talent & Recruitment',
+      crumbs: [{ t: 'C-Level Hiring & Payroll Compliance' }],
+      eb: 'C-Level Hiring & Payroll Compliance',
       title: 'Find the leaders who will take your business further.',
       lead: 'Confidential, research-led leadership search and talent intelligence — from the C-suite and the boardroom to interim leaders who step in when it matters most.',
       buttons: btn('#services', 'Explore services') + btn('#enquire', 'Submit a hiring brief', 'ghost'),
@@ -667,7 +667,7 @@ const workCard = (w) => `
       </article>`;
 
 const homePage = () => layout({
-  title: 'Headstart | Branding & Marketing and Talent & Recruitment',
+  title: 'Headstart | Branding & Marketing and C-Level Hiring & Payroll Compliance',
   desc: 'Headstart helps organisations build brands, generate demand and hire exceptional leaders — through integrated branding & marketing and talent & recruitment services.',
   active: 'home',
   page: 'home',
@@ -677,11 +677,11 @@ const homePage = () => layout({
   <div class="pattern" aria-hidden="true"></div>
   <div class="container hero__inner">
     <div class="hero__content">
-      ${eyebrow('Branding & Marketing  ·  Talent & Recruitment', true)}
+      ${eyebrow('Branding & Marketing  ·  C-Level Hiring & Payroll Compliance', true)}
       <h1 class="hero__title">
-        <span class="line"><span>Give your</span></span>
-        <span class="line"><span class="rotator" data-rotator><b class="is-on">brand</b><b>growth</b><b>pipeline</b><b>leadership</b></span></span>
-        <span class="line"><span>a head start<i>.</i></span></span>
+        <span class="line"><span>Talent<i>.</i></span></span>
+        <span class="line"><span class="hero__gold">Growth<i>.</i></span></span>
+        <span class="line"><span>Transformation<i>.</i></span></span>
       </h1>
       <p class="lead hero__lead">We build brands people remember, campaigns that generate measurable demand, and leadership teams that take businesses further — as one integrated growth partner.</p>
       <div class="btns hero__btns">
@@ -689,7 +689,7 @@ const homePage = () => layout({
         ${btn('contact.html', 'Book a consultation', 'ghost', 'arrow-up-right')}
       </div>
       <div class="hero__meta">
-        <div><strong>12</strong><span>Specialised services</span></div>
+        <div><strong>13</strong><span>Specialised services</span></div>
         <div><strong>20+</strong><span>Industries served</span></div>
         <div><strong>2</strong><span>Integrated practices</span></div>
       </div>
@@ -698,7 +698,7 @@ const homePage = () => layout({
       ${media('1522071820081-009f0129c71c', 'Marketing team collaborating', { w: 1000, h: 1200, cls: 'hero__img hero__img--main', eager: true, attrs: 'data-parallax="0.08"' })}
       ${media('1519085360753-af0119f7cbe7', 'Senior executive', { w: 600, h: 700, cls: 'hero__img hero__img--sub', eager: true, attrs: 'data-parallax="-0.06"' })}
       <div class="float-card float-card--a"><span>${icon('trending')}</span><div><small>Branding &amp; Marketing</small><strong>Demand that converts</strong></div></div>
-      <div class="float-card float-card--b"><span>${icon('crown')}</span><div><small>Talent &amp; Recruitment</small><strong>Leaders who deliver</strong></div></div>
+      <div class="float-card float-card--b"><span>${icon('crown')}</span><div><small>C-Level Hiring &amp; Payroll Compliance</small><strong>Leaders who deliver</strong></div></div>
       <div class="hero__badge" aria-hidden="true">
         <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#circ">GROW AHEAD • STAY AHEAD • GROW AHEAD • STAY AHEAD • </textPath></text></svg>
         ${icon('arrow-up-right')}
@@ -733,12 +733,12 @@ ${marquee(industries)}
         </div>
       </a>
       <a class="practice" href="talent-recruitment.html" data-reveal>
-        ${media('1556761175-b413da4baf72', 'Talent and recruitment', { w: 1100, h: 1000 })}
+        ${media('1556761175-b413da4baf72', 'C-level hiring and payroll compliance', { w: 1100, h: 1000 })}
         <div class="practice__body">
           <span class="practice__icon">${icon('users')}</span>
-          <span class="practice__count">04 Services</span>
-          <h3>Talent &amp; Recruitment</h3>
-          <p>C-level executive hiring, board and independent director search, interim and fractional CXOs, and talent intelligence.</p>
+          <span class="practice__count">05 Services</span>
+          <h3>C-Level Hiring &amp; Payroll Compliance</h3>
+          <p>C-level executive hiring, board and independent director search, interim and fractional CXOs, talent intelligence and payroll compliance.</p>
           <span class="practice__cta">Explore practice ${icon('arrow-right')}</span>
         </div>
       </a>
@@ -748,11 +748,11 @@ ${marquee(industries)}
 
 <section class="section section--gray" id="services">
   <div class="container">
-    ${sectionHead({ eyebrow: 'What We Do', title: 'Services designed to <em>move you forward</em>', text: 'Choose a single service or combine several. Every engagement is shaped around your objectives, audience and budget.' })}
+    ${sectionHead({ eyebrow: 'What We Do', title: 'Your Ambition. Our Expertise. <em>Shared Progress.</em>', text: 'Choose a single service or combine several. Every engagement is shaped around your objectives, audience and budget.' })}
     <div class="tabs" data-tabs>
       <div class="tabs__nav" role="tablist" data-reveal>
         <button role="tab" aria-selected="true" aria-controls="tab-mkt" id="tb-mkt" class="is-active">Branding &amp; Marketing <span>08</span></button>
-        <button role="tab" aria-selected="false" aria-controls="tab-tal" id="tb-tal" tabindex="-1">Talent &amp; Recruitment <span>04</span></button>
+        <button role="tab" aria-selected="false" aria-controls="tab-tal" id="tb-tal" tabindex="-1">C-Level Hiring &amp; Payroll Compliance <span>05</span></button>
         <i class="tabs__ink" aria-hidden="true"></i>
       </div>
       <div class="tabs__panel is-active" role="tabpanel" id="tab-mkt" aria-labelledby="tb-mkt">
@@ -767,7 +767,7 @@ ${marquee(industries)}
 
 <section class="stats">
   <div class="container stats__grid" data-stagger>
-    <div class="stat" data-reveal><strong><span data-count="12">0</span></strong><span>Specialised services across two practices</span></div>
+    <div class="stat" data-reveal><strong><span data-count="13">0</span></strong><span>Specialised services across two practices</span></div>
     <div class="stat" data-reveal><strong><span data-count="20">0</span>+</strong><span>Industries served, from D2C to manufacturing</span></div>
     <div class="stat" data-reveal><strong><span data-count="360">0</span>&deg;</strong><span>Support from brand building to leadership hiring</span></div>
     <div class="stat" data-reveal><strong><span data-count="5">0</span></strong><span>Step framework behind every engagement</span></div>
@@ -857,7 +857,7 @@ const aboutPage = () => layout({
       ${eyebrow('Our Story')}
       <h2 class="display-2">Built to give ambitious organisations a head start.</h2>
       <p>Headstart was founded on a simple observation: growing businesses often juggle many partners — one for digital marketing, another for events, another for B2B outreach, and yet another for senior hiring. The result is fragmented effort and lost momentum.</p>
-      <p>We set out to change that. Today, Headstart operates two integrated practices — <strong>Branding &amp; Marketing</strong> and <strong>Talent &amp; Recruitment</strong> — giving clients a single, accountable partner for building their brand, generating demand and strengthening their leadership.</p>
+      <p>We set out to change that. Today, Headstart operates two integrated practices — <strong>Branding &amp; Marketing</strong> and <strong>C-Level Hiring &amp; Payroll Compliance</strong> — giving clients a single, accountable partner for building their brand, generating demand and strengthening their leadership.</p>
       <p>We work with startups, growing businesses, enterprises, associations and institutions across sectors — bringing structured thinking, creative execution and a genuine commitment to outcomes.</p>
     </div>
   </div>
@@ -890,8 +890,8 @@ const aboutPage = () => layout({
         <div class="svc-tile__body"><span class="svc-tile__icon">${icon('megaphone')}</span><h3>Branding &amp; Marketing</h3><p>${marketing.map((m) => e(m.short)).join(' · ')}</p><span class="link-arrow">Explore ${icon('arrow-right')}</span></div>
       </a>
       <a class="svc-tile" href="talent-recruitment.html" data-reveal>
-        ${media('1519085360753-af0119f7cbe7', 'Talent & Recruitment', { w: 1000, h: 640 })}
-        <div class="svc-tile__body"><span class="svc-tile__icon">${icon('users')}</span><h3>Talent &amp; Recruitment</h3><p>${talent.map((m) => e(m.short)).join(' · ')}</p><span class="link-arrow">Explore ${icon('arrow-right')}</span></div>
+        ${media('1519085360753-af0119f7cbe7', 'C-Level Hiring & Payroll Compliance', { w: 1000, h: 640 })}
+        <div class="svc-tile__body"><span class="svc-tile__icon">${icon('users')}</span><h3>C-Level Hiring &amp; Payroll Compliance</h3><p>${talent.map((m) => e(m.short)).join(' · ')}</p><span class="link-arrow">Explore ${icon('arrow-right')}</span></div>
       </a>
     </div>
   </div>
@@ -911,7 +911,7 @@ const aboutPage = () => layout({
 // Our Works
 // ---------------------------------------------------------------------------
 const worksPage = () => {
-  const filters = [['all', 'All Work'], ['digital', 'Digital & Regional'], ['b2b', 'B2B'], ['events', 'Events'], ['activation', 'Activation'], ['content', 'Content'], ['talent', 'Talent']];
+  const filters = [['all', 'All Work'], ['digital', 'Digital & Regional'], ['b2b', 'B2B'], ['events', 'Events'], ['activation', 'Activation'], ['content', 'Content'], ['talent', 'C-Level Hiring']];
   return layout({
     title: 'Our Works | Headstart',
     desc: 'Selected Headstart engagements across digital marketing, B2B lead generation, corporate events, brand activation, content and leadership hiring.',
@@ -922,7 +922,7 @@ const worksPage = () => {
         crumbs: [{ t: 'Our Works' }],
         eb: 'Our Works',
         title: 'Work that moves brands, markets and leaders forward.',
-        lead: 'A selection of engagements across our Branding & Marketing and Talent & Recruitment practices.',
+        lead: 'A selection of engagements across our Branding & Marketing and C-Level Hiring & Payroll Compliance practices.',
         compact: true,
       }) + `
 <!-- NOTE: The projects below are illustrative placeholders. Replace them with real case studies in build/data.js. -->
@@ -940,7 +940,7 @@ const worksPage = () => {
 <section class="stats">
   <div class="container stats__grid" data-stagger>
     <div class="stat" data-reveal><strong><span data-count="8">0</span></strong><span>Marketing disciplines delivered end to end</span></div>
-    <div class="stat" data-reveal><strong><span data-count="4">0</span></strong><span>Leadership and talent intelligence services</span></div>
+    <div class="stat" data-reveal><strong><span data-count="5">0</span></strong><span>Leadership, talent intelligence and payroll services</span></div>
     <div class="stat" data-reveal><strong><span data-count="20">0</span>+</strong><span>Industries across consumer and B2B markets</span></div>
     <div class="stat" data-reveal><strong><span data-count="1">0</span></strong><span>Accountable partner for every engagement</span></div>
   </div>
@@ -1015,8 +1015,8 @@ const contactPage = () => layout({
     pageHero({
       crumbs: [{ t: 'Contact Us' }],
       eb: 'Contact Us',
-      title: "Let's start a conversation.",
-      lead: 'Whether you have a campaign in mind, an event to plan or a leadership role to fill, our team is ready to help.',
+      title: 'Your Next Opportunity Starts Here.',
+      lead: "Have a business idea, a growth opportunity, an event to plan, or a leadership requirement? Let's connect and turn your vision into action.",
       compact: true,
     }) + `
 <section class="section contact">
@@ -1043,7 +1043,7 @@ const contactPage = () => layout({
     <div class="faq__list" data-stagger>
       ${[
         ['Do you work with startups as well as large enterprises?', 'Yes. We work with startups, growing businesses, enterprises, associations and institutions. Every engagement is scoped to your stage, objectives and budget.'],
-        ['Can Headstart handle both marketing and hiring for the same company?', 'Absolutely — that is one of our strengths. Many clients work with both our Branding & Marketing and Talent & Recruitment practices through a single point of contact.'],
+        ['Can Headstart handle both marketing and hiring for the same company?', 'Absolutely — that is one of our strengths. Many clients work with both our Branding & Marketing and C-Level Hiring & Payroll Compliance practices through a single point of contact.'],
         ['How do you keep executive searches confidential?', 'All mandates are handled under strict confidentiality. Candidate approaches are discreet, and client information is shared only with your approval and on a need-to-know basis.'],
         ['Do you offer one-off projects or only retainers?', 'Both. We deliver one-off projects such as events, launches and specific searches, as well as ongoing retainers for marketing, lead generation and content.'],
         ['What happens after I submit an enquiry?', 'Our team reviews your requirement and contacts you to schedule a discovery conversation. We then share a tailored proposal with scope, timelines and investment.'],
